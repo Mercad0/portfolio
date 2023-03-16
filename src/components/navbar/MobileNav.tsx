@@ -9,7 +9,7 @@ interface MobileNavProps {
   links: { title: string; href: string }[];
 }
 
-const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
+export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const links = [
     { title: "About", href: "#about" },
     { title: "Skills", href: "#skills" },
@@ -30,25 +30,23 @@ const MobileNav = ({ isOpen, onClose }: MobileNavProps) => {
       <div className="h-full container mx-auto px-4 md:px-8 flex flex-col">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 focus:outline-none transition-all duration-300 transform hover:text-gray-300 hover:rotate-180"
+          className="absolute top-6 right-4 text-gray-500 focus:outline-none transition-all duration-300 transform hover:text-gray-300 hover:rotate-180"
         >
           <GrClose className="w-10 h-10" />
         </button>
         <Image
-              src="/amLogo.svg"
-              alt="Logo"
-              width={600}
-              height={100}
-              priority={true}
-              style={{ width: "600px", height: "auto"}}
-            />
+          src="/amLogoWhite.svg"
+          alt="Logo"
+          width={600}
+          height={100}
+          priority={true}
+          style={{ width: "600px", height: "auto" }}
+        />
         <NavName links={links} onClose={onClose} isOpen />
       </div>
     </div>
   );
-};
-
-export default MobileNav;
+}
 
 const NavName = ({ links, onClose }: MobileNavProps) => {
   return (

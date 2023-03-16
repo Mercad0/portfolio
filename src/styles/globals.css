@@ -20,15 +20,26 @@ html {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 24px;
   bottom: 0;
   left: 0;
-  background-color: red;
-  transform-origin: left;
+  z-index: -1;
+  background-color: black;
+  opacity: 80%;
+  transform-origin: bottom right;
   transition: transform 0.55s ease-out;
+  border-radius: 5px;
 }
 
 .action-underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.rotateIcon {
+  transition: transform 0.7s ease-in-out;
+}
+
+.rotateIcon:hover {
+  transform: rotateY(360deg);
 }
