@@ -79,7 +79,7 @@ export default function Skills() {
   return (
     <div className="h-fit w-full pt-20 text-center" id="skills">
       <div className=" md:w-[500px] justify-center w-[350px] min-h-40 bg-gray-200 hover:bg-gray-100 duration-500 rounded-lg hover:rounded-3xl shadow-lg p-6 mx-auto">
-        <h3 className="md:text-2xl text-lg font-medium text-">Skills</h3>
+        <h3 className="md:text-2xl text-xl font-medium">Skills</h3>
         <div className="flex p-2">
           <SkillIcons icons={icons} />
         </div>

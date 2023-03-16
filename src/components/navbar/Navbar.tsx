@@ -17,7 +17,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="h-[70px] w-[90%] mt-4 rounded-3xl fixed bg-gradient-to-br from-gray-400 to-gray-200 shadow-xl font-medium ">
+      <nav className="h-[70px] w-[90%] mt-4 rounded-3xl fixed bg-gradient-to-br from-gray-400 to-gray-200 shadow-xl font-medium z-50">
         <div className="container mx-auto px-4 md:px-6 flex items-center duration-500  hover:bg-gray-200 hover:rounded-3xl justify-between h-full">
           <Link href="/">
             <Image
