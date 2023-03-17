@@ -19,7 +19,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
   return (
     <div
-      className={`fixed top-0 left-0 rounded-b-xl ease-in-out w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 z-50 transition-all ${
+      className={`fixed top-0 left-0 ease-in-out w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 z-50 transition-all ${
         isOpen ? "pointer-events-auto" : " pointer-events-none"
       }`}
       style={{
@@ -30,7 +30,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       <div className="h-full container mx-auto px-4 md:px-8 flex flex-col">
         <button
           onClick={onClose}
-          className="absolute top-6 right-4 text-gray-500 focus:outline-none transition-all duration-300 transform hover:text-gray-300 hover:rotate-180"
+          className="absolute top-20 right-4 text-gray-500 focus:outline-none transition-all duration-300 transform hover:text-gray-300 hover:rotate-180"
         >
           <GrClose className="w-10 h-10" />
         </button>

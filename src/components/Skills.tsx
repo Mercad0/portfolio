@@ -1,6 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { FaBootstrap, FaCss3Alt, FaHtml5, FaReact, FaSwift } from "react-icons/fa";
+import {
+  FaBootstrap,
+  FaCss3Alt,
+  FaHtml5,
+  FaReact,
+  FaSwift,
+} from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import Image from "next/image";
@@ -27,7 +33,7 @@ export default function Skills() {
     },
     {
       name: "Bootstrap",
-      href: "FaBootstrap",
+      href: "https://getbootstrap.com/",
       icon: <FaBootstrap />,
       color: "text-purple-600 hover:bg-purple-200 ",
     },
@@ -56,25 +62,27 @@ export default function Skills() {
       color: "text-sky-600 hover:bg-blue-300 ",
     },
     {
-        name: "Swift",
-        href: "https://swift.org/",
-        icon: <FaSwift />,
-        color: "text-orange-500 hover:bg-orange-300 ",
+      name: "Swift",
+      href: "https://swift.org/",
+      icon: <FaSwift />,
+      color: "text-orange-500 hover:bg-orange-300 ",
     },
     {
-        name: "Chat Gpt",
-        href: "https://openai.com/blog/chatgpt",
-        icon: <Image
-        src="/chatGpt.png"
-        alt="Logo"
-        width={40}
-        height={20}
-        priority={true}
-        style={{ width: "38px", height: "auto" }}
-        className="transition duration-300 ease-in-out transform hover:scale-125"
-      />,
+      name: "Chat Gpt",
+      href: "https://openai.com/blog/chatgpt",
+      icon: (
+        <Image
+          src="/chatGpt.png"
+          alt="Logo"
+          width={40}
+          height={20}
+          priority={true}
+          style={{ width: "38px", height: "auto" }}
+          className="transition duration-300 ease-in-out transform hover:scale-125"
+        />
+      ),
       color: "text-green hover:bg-green-300",
-    }
+    },
   ];
   return (
     <div className="h-fit w-full pt-20 text-center" id="skills">
