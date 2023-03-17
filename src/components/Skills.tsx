@@ -10,6 +10,7 @@ import {
 import { SiJavascript, SiTypescript, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import Image from "next/image";
+import { SkillProps } from "./Types";
 
 export default function Skills() {
   const icons = [
@@ -94,15 +95,6 @@ export default function Skills() {
       </div>
     </div>
   );
-}
-
-interface SkillProps {
-  icons: {
-    name: string;
-    href: string;
-    icon: any;
-    color: string;
-  }[];
 }
 
 const SkillIcons = ({ icons }: SkillProps) => {

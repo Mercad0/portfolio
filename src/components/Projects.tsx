@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaCode } from "react-icons/fa";
 import { RiLiveFill } from "react-icons/ri";
+import { ProjectProps } from "./Types";
 
 export default function Projects() {
   const projects = [
@@ -77,30 +78,20 @@ export default function Projects() {
   );
 }
 
-interface ProjectProps {
-  projects: {
-    photo: any;
-    title: string;
-    description: string;
-    code: string;
-    live: string;
-  }[];
-}
-
 const Eachproject = ({ projects }: ProjectProps) => {
   return (
     <ul className="gap-8 flex flex-wrap">
-      {projects.map((projects) => (
-        <li key={projects.title} className="border border-black rounded-lg max-w-sm mx-auto bg-gray-200 overflow-hidden">
+      {projects.map((project) => (
+        <li key={project.title} className="border border-black rounded-lg max-w-sm mx-auto bg-gray-200 overflow-hidden">
             <div className="w-full border border-b-black">
-          {projects.photo}
+          {project.photo}
           </div>
           <div className="p-2">
-            <h3 className="text-2xl font-bold">{projects.title}</h3>
-            <h5 className="mb-2">{projects.description}</h5>
+            <h3 className="text-2xl font-bold">{project.title}</h3>
+            <h5 className="mb-2">{project.description}</h5>
             <div className="flex space-x-4 justify-center text-2xl">
               <Link
-                href={projects.code}
+                href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-3xl duration-500 text-red-600"
@@ -108,7 +99,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 <FaCode />
               </Link>
               <Link
-                href={projects.live}
+                href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" hover:text-3xl duration-500 text-lime-500"

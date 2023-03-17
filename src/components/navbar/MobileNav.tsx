@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { GrClose } from "react-icons/gr";
 import Image from "next/image";
-
-interface MobileNavProps {
-  isOpen: boolean;
-  onClose: () => void;
-
-  links: { title: string; href: string }[];
-}
+import { MobileNavProps } from "../Types";
 
 export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const links = [
@@ -50,7 +44,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
 const NavName = ({ links, onClose }: MobileNavProps) => {
   return (
-    <ul className="space-y-4 text-white text-center font-medium text-2xl">
+    <ul className="space-y-4 text-white text-center font-medium text-2xl h-full">
       {links.map((link) => (
         <li key={link.href} className="cursor-pointer block" onClick={onClose}>
           <Link href={link.href}>{link.title}</Link>

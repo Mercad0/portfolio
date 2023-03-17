@@ -3,6 +3,7 @@ import React from "react";
 import { FaGripLines } from "react-icons/fa";
 import MobileNav from "./MobileNav";
 import Image from "next/image";
+import { NameProps } from "../Types";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,10 +47,6 @@ export default function NavBar() {
       <MobileNav isOpen={isOpen} onClose={toggle} links={[]} />
     </>
   );
-}
-// props: links to avoid rewriting each class name individually
-interface NameProps {
-  links: { title: string; href: string }[];
 }
 
 const LinkName = ({ links }: NameProps) => {
