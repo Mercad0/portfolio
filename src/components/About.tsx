@@ -4,10 +4,10 @@ import Link from "next/link";
 function About() {
   return (
     <div className="h-fit w-full pt-40 text-center" id="about">
-      <div className=" md:w-[540px] w-80 min-h-40 bg-gray-200 hover:bg-gray-100 duration-500 rounded-lg hover:rounded-3xl shadow-lg p-6 md:ml-20 mx-auto">
-        <h3 className="md:text-3xl text-md leading-relaxed">
+      <div className=" md:w-[540px] w-[340px] min-h-40 bg-gray-200 hover:bg-gray-100 duration-500 rounded-lg hover:rounded-3xl shadow-lg p-6 md:ml-20 mx-auto">
+        <h3 className="md:text-3xl text-xl leading-relaxed">
           Hello there, I&rsquo;m Abimael Mercado. I&rsquo;m a
-          <span className="md:text-5xl text-2xl font-extralight">
+          <span className="md:text-5xl text-3xl font-extralight">
             {" "}
             software developer
           </span>{" "}
