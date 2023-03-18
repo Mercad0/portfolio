@@ -1,7 +1,7 @@
 // Projects.tsx Props
 export interface ProjectProps {
   projects: {
-    photo: any;
+    src: string;
     title: string;
     description: string;
     code: string;
