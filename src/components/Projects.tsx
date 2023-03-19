@@ -45,7 +45,7 @@ export default function Projects() {
       className="h-fit w-fit m-4 py-20 text-center flex -mt-10"
       id="projects"
     >
-      <div className=" md:w-full justify-center w-fit min-h-fit bg-gradient-to-br from-gray-400 to-gray-600 shadow-xl duration-500 rounded-lg hover:rounded-3xl p-6 mx-auto">
+      <div className=" md:w-full justify-center w-fit min-h-fit bg-gradient-to-br from-gray-300 to-gray-500 shadow-xl duration-500 rounded-lg hover:rounded-3xl p-6 mx-auto">
         <h3 className="md:text-3xl text-xl text-gray-200 font-medium">
           Projects
         </h3>
@@ -63,7 +63,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
       {projects.map((project) => (
         <li
           key={project.title}
-          className="border border-black rounded-lg max-w-sm mx-auto bg-gray-200 overflow-hidden"
+          className="border border-black rounded-lg max-w-sm mx-auto bg-gray-300 overflow-hidden duration-500 hover:shadow-md hover:shadow-gray-800"
         >
           <div className="flex flex-col max-h-[400px] mb-4">
             <div className="w-full md:h-[400px] h-fit relative flex-col">
@@ -83,7 +83,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-3xl duration-500 text-red-600"
+                className="duration-500 hover:text-red-600"
               >
                 <FaCode />
               </Link>
@@ -91,7 +91,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:text-3xl duration-500 text-lime-500"
+                className="duration-500 hover:text-green-500"
               >
                 <RiLiveFill />
               </Link>
