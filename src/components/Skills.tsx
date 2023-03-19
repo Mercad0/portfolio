@@ -73,23 +73,22 @@ export default function Skills() {
       href: "https://openai.com/blog/chatgpt",
       icon: (
         <Image
-          src="/chatGpt.png"
+          src="/svgs/chatGpt.svg"
           alt="Logo"
           width={40}
-          height={20}
+          height={40}
           priority={true}
-          style={{ width: "38px", height: "auto" }}
-          className="transition duration-300 ease-in-out transform hover:scale-125"
+          className="hover:scale-[1.10] duration-300 ease-in-out transform"
         />
       ),
-      color: "text-green hover:bg-green-300",
+      color: "text-green hover:bg-green-300 hover:scale-[1.10]",
     },
   ];
   return (
-    <div className="h-fit w-full pt-20 text-center" id="skills">
-      <div className=" md:w-[500px] justify-center w-[350px] min-h-40 bg-gray-200 hover:bg-gray-100 duration-500 rounded-lg hover:rounded-3xl shadow-lg p-6 mx-auto">
+    <div className="mx-auto text-center md:pt-20 pt-10" id="skills">
+      <div className=" md:w-[500px] w-fit bg-gray-500 duration-500 rounded-lg hover:rounded-3xl shadow-xl p-6">
         <h3 className="md:text-2xl text-xl font-medium">Skills</h3>
-        <div className="flex p-2">
+        <div className="flex p-1">
           <SkillIcons icons={icons} />
         </div>
       </div>
@@ -108,10 +107,10 @@ const SkillIcons = ({ icons }: SkillProps) => {
           rel="noopener noreferrer"
         >
           <li
-            className={`flex items-center flex-col justify-center h-20 md:w-20 w-16 rounded-xl text-3xl md:text-4xl duration-300 hover:text-5xl ${icons.color}`}
+            className={`flex items-center flex-col justify-center py-1 h-20 md:w-20 w-16 rounded-xl text-4xl md:text-4xl duration-300 hover:text-5xl ${icons.color}`}
           >
             {icons.icon}
-            <div className="text-sm text-black">{icons.name}</div>
+            <div className="md:text-base text-sm text-black">{icons.name}</div>
           </li>
         </Link>
       ))}

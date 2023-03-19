@@ -32,3 +32,15 @@ export interface SkillProps {
     color: string;
   }[];
 }
+
+
+// Contact.tsx Props
+export interface ContactFormProps {
+  contacts: {
+    htmlFor: string;
+    labelName: string;
+    type: string;
+    id: string;
+    message: string;
+  }[];
+}

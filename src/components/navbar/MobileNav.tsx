@@ -29,12 +29,11 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           <GrClose className="w-10 h-10" />
         </button>
         <Image
-          src="/amLogoWhite.svg"
+          src="/svgs/amLogoWhite.svg"
           alt="Logo"
           width={600}
           height={100}
           priority={true}
-          style={{ width: "600px", height: "auto" }}
         />
         <NavName links={links} onClose={onClose} isOpen />
       </div>

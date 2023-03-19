@@ -18,16 +18,15 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="h-[70px] w-[90%] mt-4 rounded-3xl fixed bg-gradient-to-br from-gray-400 to-gray-200 shadow-xl font-medium z-50">
-        <div className="container mx-auto px-4 md:px-6 flex items-center duration-500  hover:bg-gray-200 hover:rounded-3xl justify-between h-full">
+      <nav className="h-[70px] w-[90%] mt-4 rounded-xl fixed hover:rounded-3xl duration-500 bg-gradient-to-br from-gray-300 to-gray-200 shadow-xl font-medium z-50">
+        <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
           <Link href="/">
             <Image
-              src="/amLogoDark.svg"
+              src="/svgs/amLogoDark.svg"
               alt="Logo"
-              width={100}
+              width={250}
               height={100}
               priority={true}
-              style={{ width: "225px", height: "auto" }}
             />
           </Link>
 
@@ -55,7 +54,7 @@ const LinkName = ({ links }: NameProps) => {
       {links.map((link) => (
         <li
           key={link.href}
-          className="transform hover:scale-110 hover:text-gray-200 duration-500 action-underline hover:px-5 rounded-xl"
+          className="transform hover:scale-110 duration-500 action-underline hover:px-5 rounded-xl"
         >
           <Link href={link.href}>{link.title}</Link>
         </li>
