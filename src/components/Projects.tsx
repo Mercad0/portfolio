@@ -7,36 +7,39 @@ import { ProjectProps } from "./Types";
 export default function Projects() {
   const projects = [
     {
-      title: "Testing Image one",
-      description:
-        "This row will serve for the testing of Line number 1, This row will serve for the testing of Line number 2.",
-      src: "/images/cozy.png",
+      title: "Hold",
+      description: "Pending Project Description.",
+      builtWith: "",
+      src: "/svgs/amLogoDark.svg",
       code: "https://github.com/Mercad0/teacozy",
       live: "https://photomatic-three.vercel.app/",
     },
     {
-      title: "Testing Image two",
+      title: "Tea Cozy",
       description:
-        "This row will serve for the testing of Line number 1, This row will serve for the testing of Line number 2.",
+        "Tea cozy is a Virtual Store about Organic Teas & Different Flavors. ",
+      builtWith: "Built with Next.js, Typescript, & TailwindCSS",
       src: "/images/cozy.png",
       code: "https://github.com/Mercad0/teacozy",
       live: "https://teacozy-beige.vercel.app/",
     },
     {
-      title: "Testing Image three",
+      title: "YNV Nails",
       description:
-        "This row will serve for the testing of Line number 1, This row will serve for the testing of Line number 2.",
-      src: "/images/cozy.png",
-      code: "https://github.com/Mercad0/teacozy",
-      live: "https://teacozy-beige.vercel.app/",
+        "YNVnails is a project site about Nail Products, Nail styles & colors.",
+      builtWith: "Built with React, Typescript, TailwindCss and Firebase.",
+      src: "/images/ynvnails.png",
+      code: "https://github.com/JustMrMendez/ynvnails",
+      live: "https://ynvnails.vercel.app/",
     },
     {
-      title: "Testing Image four",
+      title: "Photomatic",
       description:
-        "This row will serve for the testing of Line number 1, This row will serve for the testing of Line number 2.",
-      src: "/images/cozy.png",
-      code: "https://github.com/Mercad0/teacozy",
-      live: "https://teacozy-beige.vercel.app/",
+        "Photomatic is a virtual store about different types of filters for photography.",
+      builtWith: "Built with Next.js, Typescript, & TailwindCss",
+      src: "/images/photoMatic.png",
+      code: "https://github.com/Mercad0/photomatic",
+      live: "https://photomatic-three.vercel.app/",
     },
   ];
 
@@ -45,7 +48,7 @@ export default function Projects() {
       className="h-fit w-fit m-4 py-20 text-center flex -mt-10"
       id="projects"
     >
-      <div className=" md:w-full justify-center w-fit min-h-fit bg-gradient-to-br from-gray-300 to-gray-500 shadow-xl duration-500 rounded-lg hover:rounded-3xl p-6 mx-auto">
+      <div className=" md:w-full justify-center w-fit min-h-fit bg-gradient-to-br from-gray-300 to-gray-600 shadow-xl duration-500 rounded-lg hover:rounded-3xl p-6 mx-auto">
         <h3 className="md:text-3xl text-xl text-gray-200 font-medium">
           Projects
         </h3>
@@ -63,27 +66,30 @@ const Eachproject = ({ projects }: ProjectProps) => {
       {projects.map((project) => (
         <li
           key={project.title}
-          className="border border-black rounded-lg max-w-sm mx-auto bg-gray-300 overflow-hidden duration-500 hover:shadow-md hover:shadow-gray-800"
+          className="border border-black rounded-lg max-w-sm mx-auto bg-gray-200 overflow-hidden duration-500 hover:shadow-md hover:shadow-gray-800"
         >
-          <div className="flex flex-col max-h-[400px] mb-4">
-            <div className="w-full md:h-[400px] h-fit relative flex-col">
+          <div className="flex flex-col max-h-[500px] mb-4">
+            <div className="w-full md:h-[370px] h-fit relative flex-col">
               <Image
                 src={project.src}
                 alt="Logo"
                 width={400}
                 height={10}
                 priority={true}
-                className="hover:scale-105 transition duration-500 ease-in-out transform"
+                className="hover:scale-105 transition duration-500 ease-in-out transform image"
               />
-              <h3 className="text-2xl font-bold mt-3">{project.title}</h3>
-              <p className="mb-2">{project.description}</p>
+              <h3 className="text-2xl font-bold mt-2">{project.title}</h3>
+              <p className="mb-1">{project.description}</p>
+              <p className="text-base bg-gray-300 rounded-lg w-fit mx-auto px-2">
+                {project.builtWith}
+              </p>
             </div>
             <div className="flex space-x-4 justify-center text-2xl max-h-10">
               <Link
                 href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="duration-500 hover:text-red-600"
+                className="duration-500 text-red-600 hover:scale-125"
               >
                 <FaCode />
               </Link>
@@ -91,7 +97,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="duration-500 hover:text-green-500"
+                className="duration-500 text-green-500 hover:scale-125"
               >
                 <RiLiveFill />
               </Link>

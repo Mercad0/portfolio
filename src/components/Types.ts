@@ -6,6 +6,7 @@ export interface ProjectProps {
     description: string;
     code: string;
     live: string;
+    builtWith: string;
   }[];
 }
 

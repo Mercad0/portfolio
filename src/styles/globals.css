@@ -44,3 +44,7 @@ html {
 .rotateIcon:hover {
   transform: rotateY(360deg);
 }
+
+.image {
+max-height: 300px;
+}
