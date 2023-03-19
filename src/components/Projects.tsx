@@ -37,7 +37,7 @@ export default function Projects() {
       description:
         "Photomatic is a virtual store about different types of filters for photography.",
       builtWith: "Built with Next.js, Typescript, & TailwindCss",
-      src: "/images/photoMatic.png",
+      src: "/images/photomatic.png",
       code: "https://github.com/Mercad0/photomatic",
       live: "https://photomatic-three.vercel.app/",
     },
