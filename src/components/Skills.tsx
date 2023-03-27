@@ -7,7 +7,7 @@ import {
   FaReact,
   FaSwift,
 } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiTailwindcss, SiFirebase } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import Image from "next/image";
 import { SkillProps } from "./Types";
@@ -81,8 +81,14 @@ export default function Skills() {
           className="hover:scale-[1.10] duration-300 ease-in-out transform"
         />
       ),
-      color: "text-green hover:bg-green-300 hover:scale-[1.10]",
+      color: "hover:bg-green-300 hover:scale-[1.10]",
     },
+    {
+      name: "Firebase",
+      href: "https://firebase.google.com/",
+      icon: <SiFirebase />,
+      color: "text-yellow-500 hover:bg-yellow-200",
+    }
   ];
   return (
     <div className="mx-auto text-center md:pt-20 pt-10" id="skills">
