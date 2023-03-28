@@ -62,21 +62,23 @@ const ContactForm = ({ contacts }: ContactFormProps) => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSending(true);
-  
+    setSentStatus("sending");
+
     try {
       await db.collection("contactForm").add(formData);
       setFormData({ email: "", subject: "", message: "" });
-      alert("Your message has been sent!");
+      setSentStatus("sent");
     } catch (error) {
       console.error("Error submitting the form: ", error);
       alert("There was an error submitting the form. Please try again.");
     } finally {
-      setSending(false);
+      setTimeout(() => setSentStatus("idle"), 3000);
     }
   };
-  
-  const [sending, setSending] = useState(false);
+
+  const [sentStatus, setSentStatus] = useState<"idle" | "sending" | "sent">(
+    "idle"
+  );
 
   return (
     <form className="space-y-4 text-md flex flex-col" onSubmit={handleSubmit}>
@@ -109,38 +111,39 @@ const ContactForm = ({ contacts }: ContactFormProps) => {
         </div>
       ))}
       <button
-  type="submit"
-  disabled={sending}
-  className={`py-2 px-4 text-md font-roboto text-center text-white rounded-lg bg-gray-700 w-fit hover:bg-green-600 transition-all duration-300 ${
-    sending ? "animate-pulse" : ""
-  }`}
->
-  {sending ? (
-    <svg
-      className="w-5 h-5 animate-spin"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-    >
-      <circle
-        className="opacity-25"
-        cx="12"
-        cy="12"
-        r="10"
-        stroke="currentColor"
-        strokeWidth="4"
-      ></circle>
-      <path
-        className="opacity-75"
-        fill="currentColor"
-        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-      ></path>
-    </svg>
-  ) : (
-    "Send message"
-  )}
-</button>
-
+        type="submit"
+        disabled={sentStatus === "sending" || sentStatus === "sent"}
+        className={`py-2 px-4 text-md font-roboto text-center text-white rounded-lg bg-gray-700 w-fit hover:bg-green-600 transition-all duration-300 ${
+          sentStatus === "sending" ? "animate-pulse" : ""
+        }`}
+      >
+        {sentStatus === "sending" ? (
+          <svg
+            className="w-5 h-5 animate-spin text-green-600"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+        ) : sentStatus === "sent" ? (
+          "Sent!"
+        ) : (
+          "Send message"
+        )}
+      </button>
     </form>
   );
 };
