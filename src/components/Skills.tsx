@@ -48,7 +48,7 @@ export default function Skills() {
       name: "TailwindCSS",
       href: "https://tailwindcss.com/",
       icon: <SiTailwindcss />,
-      color: "text-teal-600 hover:bg-teal-200 ",
+      color: "text-teal-600 hover:bg-teal-200",
     },
     {
       name: "NextJS",
@@ -68,21 +68,21 @@ export default function Skills() {
       icon: <FaSwift />,
       color: "text-orange-500 hover:bg-orange-300 ",
     },
-    {
-      name: "Chat Gpt",
-      href: "https://openai.com/blog/chatgpt",
-      icon: (
-        <Image
-          src="/svgs/chatGpt.svg"
-          alt="Logo"
-          width={40}
-          height={40}
-          priority={true}
-          className="hover:scale-[1.10] duration-300 ease-in-out transform"
-        />
-      ),
-      color: "hover:bg-green-300 hover:scale-[1.10]",
-    },
+    // {
+    //   name: "Chat Gpt",
+    //   href: "https://openai.com/blog/chatgpt",
+    //   icon: (
+    //     <Image
+    //       src="/svgs/chatGpt.svg"
+    //       alt="Logo"
+    //       width={40}
+    //       height={40}
+    //       priority={true}
+    //       className="hover:scale-[1.10] duration-300 ease-in-out transform"
+    //     />
+    //   ),
+    //   color: "hover:bg-green-300 hover:scale-[1.10]",
+    // },
     {
       name: "Firebase",
       href: "https://firebase.google.com/",
@@ -104,7 +104,7 @@ export default function Skills() {
 
 const SkillIcons = ({ icons }: SkillProps) => {
   return (
-    <ul className="flex flex-wrap gap-2">
+    <ul className="flex flex-wrap gap-2 justify-center">
       {icons.map((icons) => (
         <Link
           href={icons.href}
@@ -113,7 +113,7 @@ const SkillIcons = ({ icons }: SkillProps) => {
           rel="noopener noreferrer"
         >
           <li
-            className={`flex items-center flex-col justify-center py-1 h-20 md:w-20 w-16 rounded-xl text-4xl md:text-4xl duration-300 hover:text-5xl ${icons.color}`}
+            className={`flex items-center flex-col justify-center py-1 h-20 md:w-24 w-16 rounded-xl text-4xl duration-300 hover:text-5xl ${icons.color}`}
           >
             {icons.icon}
             <div className="md:text-base text-sm text-black">{icons.name}</div>

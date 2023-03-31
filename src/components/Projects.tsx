@@ -6,14 +6,14 @@ import { ProjectProps } from "./Types";
 
 export default function Projects() {
   const projects = [
-    {
-      title: "Hold",
-      description: "Pending Project Description.",
-      builtWith: "",
-      src: "/svgs/amLogoDark.svg",
-      code: "https://github.com/Mercad0/teacozy",
-      live: "https://photomatic-three.vercel.app/",
-    },
+    // {
+    //   title: "Hold",
+    //   description: "Pending Project Description.",
+    //   builtWith: "",
+    //   src: "/svgs/amLogoDark.svg",
+    //   code: "https://github.com/Mercad0/teacozy",
+    //   live: "https://photomatic-three.vercel.app/",
+    // },
     {
       title: "Tea Cozy",
       description:
