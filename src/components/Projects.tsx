@@ -27,7 +27,7 @@ export default function Projects() {
       title: "YNV Nails",
       description:
         "YNVnails is a project site about Nail Products, Nail styles & colors.",
-      builtWith: "Built with React, Typescript, TailwindCss and Firebase.",
+      builtWith: "Built with React, TypeScript, TailwindCSS and Firebase.",
       src: "/images/ynvnails.png",
       code: "https://github.com/JustMrMendez/ynvnails",
       live: "https://ynvnails.vercel.app/",
@@ -36,7 +36,7 @@ export default function Projects() {
       title: "Photomatic",
       description:
         "Photomatic is a virtual store about different types of filters for photography.",
-      builtWith: "Built with Next.js, Typescript, & TailwindCss",
+      builtWith: "Built with Next.js, TypeScript, & TailwindCSS",
       src: "/images/photomatic.png",
       code: "https://github.com/Mercad0/photomatic",
       live: "https://photomatic-three.vercel.app/",
@@ -89,7 +89,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 href={project.code}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="duration-500 text-red-600 hover:scale-125"
+                className="duration-500 hover:text-red-600 hover:scale-125"
               >
                 <FaCode />
               </Link>
@@ -97,7 +97,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="duration-500 text-green-500 hover:scale-125"
+                className="duration-500 hover:text-green-500 hover:scale-125"
               >
                 <RiLiveFill />
               </Link>

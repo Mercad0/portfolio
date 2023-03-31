@@ -92,7 +92,7 @@ export default function Skills() {
   ];
   return (
     <div className="mx-auto text-center md:pt-20 pt-10" id="skills">
-      <div className=" md:w-[500px] w-fit bg-gray-500 duration-500 rounded-lg hover:rounded-3xl shadow-xl p-6">
+      <div className=" md:w-[600px] w-fit bg-gray-500 duration-500 rounded-lg hover:rounded-3xl shadow-xl p-6">
         <h3 className="md:text-2xl text-xl font-medium">Skills</h3>
         <div className="flex p-1">
           <SkillIcons icons={icons} />

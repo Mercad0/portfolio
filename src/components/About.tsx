@@ -13,7 +13,7 @@ function About() {
           hospitality, and operations background. Passionate about continuous
           learning and always strive to improve my skills.
         </h3>
-        <div className="flex justify-center text-4xl mt-2 space-x-6">
+        <div className="flex justify-center text-4xl mt-4 space-x-6">
           <Link
             href="https://www.github.com/mercad0"
             target="_blank"
