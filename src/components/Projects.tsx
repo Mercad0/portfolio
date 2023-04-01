@@ -1,19 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaCode } from "react-icons/fa";
 import { RiLiveFill } from "react-icons/ri";
 import { ProjectProps } from "./Types";
 
 export default function Projects() {
   const projects = [
-    // {
-    //   title: "Hold",
-    //   description: "Pending Project Description.",
-    //   builtWith: "",
-    //   src: "/svgs/amLogoDark.svg",
-    //   code: "https://github.com/Mercad0/teacozy",
-    //   live: "https://photomatic-three.vercel.app/",
-    // },
     {
       title: "Tea Cozy",
       description:
@@ -63,44 +54,44 @@ export default function Projects() {
 const Eachproject = ({ projects }: ProjectProps) => {
   return (
     <ul className="gap-8 flex flex-wrap">
-      {projects.map((project) => (
+      {projects.map(({title, description, builtWith, src, code, live }) => (
         <li
-          key={project.title}
+          key={title}
           className="border border-black rounded-lg max-w-sm mx-auto bg-gray-200 overflow-hidden duration-500 hover:shadow-md hover:shadow-gray-800"
         >
           <div className="flex flex-col max-h-[500px] mb-4">
             <div className="w-full md:h-[370px] h-fit relative flex-col">
               <Image
-                src={project.src}
+                src={src}
                 alt="Logo"
                 width={400}
                 height={10}
                 priority={true}
                 className="hover:scale-105 transition duration-500 ease-in-out transform image"
               />
-              <h3 className="text-2xl font-bold mt-2">{project.title}</h3>
-              <p className="mb-1">{project.description}</p>
+              <h3 className="text-2xl font-bold mt-2">{title}</h3>
+              <p className="mb-1">{description}</p>
               <p className="text-base bg-gray-300 rounded-lg w-fit mx-auto px-2">
-                {project.builtWith}
+                {builtWith}
               </p>
             </div>
             <div className="flex space-x-4 justify-center text-2xl max-h-10">
-              <Link
-                href={project.code}
+              <a
+                href={code}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="duration-500 hover:text-red-600 hover:scale-125"
               >
                 <FaCode />
-              </Link>
-              <Link
-                href={project.live}
+              </a>
+              <a
+                href={live}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="duration-500 hover:text-green-500 hover:scale-125"
               >
                 <RiLiveFill />
-              </Link>
+              </a>
             </div>
           </div>
         </li>

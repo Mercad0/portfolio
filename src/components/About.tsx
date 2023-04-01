@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
 import Skills from "./Skills";
 
 function About() {
@@ -14,22 +13,22 @@ function About() {
           learning and always strive to improve my skills.
         </h3>
         <div className="flex justify-center text-4xl mt-4 space-x-6">
-          <Link
+          <a
             href="https://www.github.com/mercad0"
             target="_blank"
             rel="noopener noreferrer"
             className="rotateIcon text-gray-700 hover:text-black"
           >
             <FaGithub />
-          </Link>
-          <Link
+          </a>
+          <a
             href="https://www.linkedin.com/in/abimr"
             target="_blank"
             rel="noopener noreferrer"
             className="rotateIcon text-blue-800 hover:text-blue-500"
           >
             <FaLinkedin />
-          </Link>
+          </a>
         </div>
         <div className="flex justify-center text-4xl mt-2 space-x-6">
           <Skills />

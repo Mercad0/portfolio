@@ -13,7 +13,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
   return (
     <div
-      className={`fixed top-0 left-0 ease-in-out w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 z-50 transition-all ${
+      className={`md:hidden fixed top-0 left-0 ease-in-out w-full h-full bg-gradient-to-br from-gray-800 to-gray-700 z-50 transition-all ${
         isOpen ? "pointer-events-auto" : " pointer-events-none"
       }`}
       style={{
@@ -34,6 +34,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           width={600}
           height={100}
           priority={true}
+          style={{height: "auto", width: "auto"}}
         />
         <NavName links={links} onClose={onClose} isOpen />
       </div>

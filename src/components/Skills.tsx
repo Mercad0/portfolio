@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import {
   FaBootstrap,
   FaCss3Alt,
@@ -7,9 +6,13 @@ import {
   FaReact,
   FaSwift,
 } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiTailwindcss, SiFirebase } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiFirebase,
+} from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
-import Image from "next/image";
 import { SkillProps } from "./Types";
 
 export default function Skills() {
@@ -68,58 +71,38 @@ export default function Skills() {
       icon: <FaSwift />,
       color: "text-orange-500 hover:bg-orange-300 ",
     },
-    // {
-    //   name: "Chat Gpt",
-    //   href: "https://openai.com/blog/chatgpt",
-    //   icon: (
-    //     <Image
-    //       src="/svgs/chatGpt.svg"
-    //       alt="Logo"
-    //       width={40}
-    //       height={40}
-    //       priority={true}
-    //       className="hover:scale-[1.10] duration-300 ease-in-out transform"
-    //     />
-    //   ),
-    //   color: "hover:bg-green-300 hover:scale-[1.10]",
-    // },
     {
       name: "Firebase",
       href: "https://firebase.google.com/",
       icon: <SiFirebase />,
       color: "text-yellow-500 hover:bg-yellow-200",
-    }
+    },
   ];
   return (
     <div className="mx-auto text-center md:pt-20 pt-10" id="skills">
       <div className=" md:w-[600px] w-fit bg-gray-500 duration-500 rounded-lg hover:rounded-3xl shadow-xl p-6">
         <h3 className="md:text-2xl text-xl font-medium">Skills</h3>
         <div className="flex p-1">
-          <SkillIcons icons={icons} />
+          <SkillIcon icons={icons} />
         </div>
       </div>
     </div>
   );
 }
 
-const SkillIcons = ({ icons }: SkillProps) => {
+const SkillIcon = ({ icons }: SkillProps) => {
   return (
-    <ul className="flex flex-wrap gap-2 justify-center">
-      {icons.map((icons) => (
-        <Link
-          href={icons.href}
-          key={icons.href}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <li
-            className={`flex items-center flex-col justify-center py-1 h-20 md:w-24 w-16 rounded-xl text-4xl duration-300 hover:text-5xl ${icons.color}`}
+    <div className="flex flex-wrap gap-2 justify-center">
+      {icons.map(({ href, name, icon, color }) => (
+        <a href={href} key={href} target="_blank" rel="noopener noreferrer">
+          <div
+            className={`flex items-center flex-col justify-center py-1 h-20 md:w-24 w-16 rounded-xl text-4xl duration-300 hover:text-5xl ${color}`}
           >
-            {icons.icon}
-            <div className="md:text-base text-sm text-black">{icons.name}</div>
-          </li>
-        </Link>
+            {icon}
+            <div className="md:text-base text-sm text-black">{name}</div>
+          </div>
+        </a>
       ))}
-    </ul>
+    </div>
   );
 };
