@@ -36,7 +36,7 @@ export default function Projects() {
 
   return (
     <div
-      className="h-fit w-fit m-4 py-20 text-center flex -mt-10"
+      className="h-fit w-fit m-4 py-20 text-center flex -mt-10 mx-auto"
       id="projects"
     >
       <div className=" md:w-full justify-center w-fit min-h-fit bg-gradient-to-br from-gray-300 to-gray-600 shadow-xl duration-500 rounded-lg hover:rounded-3xl p-6 mx-auto">

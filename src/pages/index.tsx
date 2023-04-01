@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/images/tabIcon.png" />
       </Head>
       <NavBar />
-      <div className="flex-grow mx-6">
+      <div className="mx-6">
         <div className="flex">
           <About />
         </div>
