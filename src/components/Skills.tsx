@@ -33,7 +33,7 @@ export default function Skills() {
       name: "Javascript",
       href: "https://www.javascript.com/",
       icon: <SiJavascript />,
-      color: "text-yellow-500 hover:bg-yellow-100",
+      color: "text-yellow-500 hover:bg-yellow-200",
     },
     {
       name: "Bootstrap",
@@ -81,7 +81,7 @@ export default function Skills() {
   return (
     <div className="mx-auto text-center md:pt-20 pt-10" id="skills">
       <div className=" md:w-[600px] w-fit bg-gray-500 duration-500 rounded-lg hover:rounded-3xl shadow-xl p-6">
-        <h3 className="md:text-2xl text-xl font-medium">Skills</h3>
+        <h3 className="md:text-2xl text-xl font-medium text-white">Skills</h3>
         <div className="flex p-1">
           <SkillIcon icons={icons} />
         </div>
@@ -99,7 +99,7 @@ const SkillIcon = ({ icons }: SkillProps) => {
             className={`flex items-center flex-col justify-center py-1 h-20 md:w-24 w-16 rounded-xl text-4xl duration-300 hover:text-5xl ${color}`}
           >
             {icon}
-            <div className="md:text-base text-sm text-black">{name}</div>
+            <div className="md:text-base text-sm text-white">{name}</div>
           </div>
         </a>
       ))}

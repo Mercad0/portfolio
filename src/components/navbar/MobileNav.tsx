@@ -24,6 +24,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
       <div className="h-full container mx-auto px-4 md:px-8 flex flex-col">
         <button
           onClick={onClose}
+          aria-label="Close mobile menu"
           className="absolute top-20 right-4 text-gray-500 focus:outline-none transition-all duration-300 transform hover:text-gray-300 hover:rotate-180"
         >
           <GrClose className="w-10 h-10" />
@@ -35,6 +36,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           height={100}
           priority={true}
           style={{height: "auto", width: "auto"}}
+          aria-label="Home"
         />
         <NavName links={links} onClose={onClose} isOpen />
       </div>

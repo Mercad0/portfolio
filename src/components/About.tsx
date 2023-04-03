@@ -17,6 +17,7 @@ function About() {
             href="https://www.github.com/mercad0"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github profile"
             className="rotateIcon text-gray-700 hover:text-black"
           >
             <FaGithub />
@@ -25,6 +26,7 @@ function About() {
             href="https://www.linkedin.com/in/abimr"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
             className="rotateIcon text-blue-800 hover:text-blue-500"
           >
             <FaLinkedin />

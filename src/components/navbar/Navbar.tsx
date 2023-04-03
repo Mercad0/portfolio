@@ -20,7 +20,7 @@ export default function NavBar() {
     <>
       <nav className="h-[70px] w-[90%] mt-4 rounded-xl fixed hover:rounded-3xl duration-500 bg-gradient-to-br from-gray-300 to-gray-200 shadow-xl font-medium z-50">
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
-          <Link href="/">
+          <Link href="/" aria-label="Home">
             <Image
               src="/svgs/amLogo.svg"
               alt="Logo"
@@ -35,6 +35,7 @@ export default function NavBar() {
           <button
             className="block md:hidden ml-auto px-4 transition-all"
             onClick={toggle}
+            aria-label="Open Mobile menu"
           >
             {isOpen ? (
               <FaGripLines className="w-10 h-10 rotate-45 duration-500 -translate-y-28" />

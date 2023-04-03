@@ -75,22 +75,30 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 {builtWith}
               </p>
             </div>
-            <div className="flex space-x-4 justify-center text-2xl max-h-10">
+            <div className="flex space-x-4 justify-center text-2xl max-h-10 mt-2">
               <a
                 href={code}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Source Code on Github"
                 className="duration-500 hover:text-red-600 hover:scale-125"
               >
+                <div className="flex items-start gap-1">
                 <FaCode />
+                <span className="text-xs pb-4">Code</span>
+                </div>
               </a>
               <a
                 href={live}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Live Website Preview"
                 className="duration-500 hover:text-green-500 hover:scale-125"
               >
+                <div className="flex items-start gap-2">
                 <RiLiveFill />
+                <div className="text-xs pb-4">Live Site</div>
+                </div>
               </a>
             </div>
           </div>
