@@ -18,7 +18,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="h-[70px] w-[90%] mt-4 rounded-xl fixed hover:rounded-3xl duration-500 bg-gradient-to-br from-gray-300 to-gray-200 shadow-xl font-medium z-50">
+      <nav className="h-[70px] w-[90%] mt-4 rounded-xl mx-auto hover:rounded-3xl duration-500 bg-gradient-to-br from-gray-300 to-gray-200 shadow-xl font-medium z-50">
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
           <Link href="/" aria-label="Home">
             <Image
@@ -56,7 +56,7 @@ const LinkName = ({ links }: NameProps) => {
       {links.map((link) => (
         <li
           key={link.href}
-          className="transform hover:scale-110 duration-500 action-underline hover:px-5 rounded-xl"
+          className="transform hover:scale-110 duration-500 action-underline hover:px-1 rounded-xl"
         >
           <Link href={link.href}>{link.title}</Link>
         </li>
