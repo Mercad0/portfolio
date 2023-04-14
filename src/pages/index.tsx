@@ -6,8 +6,8 @@ import Head from "next/head";
 export default function Home() {
   return (
     <div className="w-full flex px-6 flex-col pb-16">
-      <title>Abimael M / Software Developer</title>
       <Head>
+      <title>Abimael M / Software Developer</title>
         <meta
           name="description"
           content="Abimael M Portfolio - front-end Software Developer, Explore recent projects, and contact information."
