@@ -8,11 +8,11 @@ export default function Projects() {
     {
       title: "Tea Cozy",
       description:
-        "Tea cozy is a Virtual Store about Organic Teas & Different Flavors. ",
+        "Speedy Tune-Ups is a Clone of The original Website with an updated appearance and functionality.",
       builtWith: "Built with Next.js, Typescript, & TailwindCSS",
-      src: "/images/cozy.png",
-      code: "https://github.com/Mercad0/teacozy",
-      live: "https://teacozy-beige.vercel.app/",
+      src: "/images/speedy.png",
+      code: "https://github.com/Mercad0/SpeedyTuneUps",
+      live: "https://speedy-tune-ups.vercel.app/",
     },
     {
       title: "YNV Nails",
