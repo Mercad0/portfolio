@@ -53,29 +53,32 @@ export default function Projects() {
 
 const Eachproject = ({ projects }: ProjectProps) => {
   return (
-    <ul className="gap-8 flex flex-wrap">
-      {projects.map(({title, description, builtWith, src, code, live }) => (
+    <ul className="gap-8 flex flex-wrap container">
+      {projects.map(({ title, description, builtWith, src, code, live }) => (
         <li
           key={title}
-          className="border border-black rounded-lg max-w-sm mx-auto bg-gray-200 overflow-hidden duration-500 hover:shadow-md hover:shadow-gray-800"
+          className="border border-black rounded-lg max-w-lg mx-auto overflow-hidden bg-gray-200 duration-500 hover:shadow-md hover:shadow-gray-800"
         >
-          <div className="flex flex-col max-h-[500px] mb-4">
-            <div className="w-full md:h-[370px] h-fit relative flex-col">
-              <Image
-                src={src}
-                alt="Logo"
-                width={400}
-                height={10}
-                priority={true}
-                className="hover:scale-105 transition duration-500 ease-in-out transform image"
-              />
+          <div className="flex flex-col max-h-[500px] w-full mb-4">
+            <div className="w-full h-fit flex-col">
+              <a href={live} target="_blank" rel="noreferrer">
+                <div className="image-container relative">
+                  <Image
+                    src={src}
+                    alt={title}
+                    width={600}
+                    height={250}
+                    priority={true}
+                  />
+                </div>
+              </a>
               <h3 className="text-2xl font-bold mt-2">{title}</h3>
               <p className="mb-1">{description}</p>
               <p className="text-base bg-gray-300 rounded-lg w-fit mx-auto px-2">
                 {builtWith}
               </p>
             </div>
-            <div className="flex space-x-4 justify-center text-2xl max-h-10 mt-2">
+            <div className="flex space-x-6 justify-center text-2xl max-h-10 mt-4">
               <a
                 href={code}
                 target="_blank"
@@ -84,8 +87,8 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 className="duration-500 hover:text-red-600 hover:scale-125"
               >
                 <div className="flex items-start gap-1">
-                <FaCode />
-                <span className="text-xs pb-4">Code</span>
+                  <FaCode />
+                  <span className="text-xs pb-4">Code</span>
                 </div>
               </a>
               <a
@@ -96,8 +99,8 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 className="duration-500 hover:text-green-500 hover:scale-125"
               >
                 <div className="flex items-start gap-2">
-                <RiLiveFill />
-                <div className="text-xs pb-4">Live Site</div>
+                  <RiLiveFill />
+                  <div className="text-xs pb-4">Live Site</div>
                 </div>
               </a>
             </div>
