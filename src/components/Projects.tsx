@@ -6,7 +6,7 @@ import { ProjectProps } from "./Types";
 export default function Projects() {
   const projects = [
     {
-      title: "Tea Cozy",
+      title: "Speedy Tune-Ups",
       description:
         "Speedy Tune-Ups is a Clone of The original Website with an updated appearance and functionality.",
       builtWith: "Built with Next.js, Typescript, & TailwindCSS",
