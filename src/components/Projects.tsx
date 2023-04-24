@@ -8,7 +8,7 @@ export default function Projects() {
     {
       title: "Speedy Tune-Ups",
       description:
-        "Speedy Tune-Ups is a Clone of The original Website with an updated appearance and functionality.",
+        "Speedy Tune-Ups is a Clone of The original Website, built with a focus on performance, accessibility, and responsive design.",
       builtWith: "Built with Next.js, Typescript, & TailwindCSS",
       src: "/images/speedy.png",
       code: "https://github.com/Mercad0/SpeedyTuneUps",
@@ -17,7 +17,7 @@ export default function Projects() {
     {
       title: "YNV Nails",
       description:
-        "YNVnails is a project site about Nail Products, Nail styles & colors.",
+        "YNV Nails is a nail salon website where people can browse through manicure and pedicure products, as well as various designs.",
       builtWith: "Built with React, TypeScript, TailwindCSS and Firebase.",
       src: "/images/ynvnails.png",
       code: "https://github.com/JustMrMendez/ynvnails",
@@ -73,7 +73,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
                 </div>
               </a>
               <h3 className="text-2xl font-bold mt-2">{title}</h3>
-              <p className="mb-1">{description}</p>
+              <p className="my-4">{description}</p>
               <p className="text-base bg-gray-300 rounded-lg w-fit mx-auto px-2">
                 {builtWith}
               </p>
