@@ -35,7 +35,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
           width={600}
           height={100}
           priority={true}
-          style={{height: "auto", width: "auto"}}
+          style={{ height: "auto", width: "auto" }}
           aria-label="Home"
         />
         <NavName links={links} onClose={onClose} isOpen />
