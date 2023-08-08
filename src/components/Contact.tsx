@@ -64,16 +64,18 @@ const ContactForm = ({ contacts }: ContactFormProps) => {
     e.preventDefault();
     setSentStatus("sending");
 
-    try {
-      await db.collection("contactForm").add(formData);
-      setFormData({ email: "", subject: "", message: "" });
-      setSentStatus("sent");
-    } catch (error) {
-      console.error("Error submitting the form: ", error);
-      alert("There was an error submitting the form. Please try again.");
-    } finally {
-      setTimeout(() => setSentStatus("idle"), 3000);
-    }
+    setTimeout(async () => {
+      try {
+        await db.collection("contactForm").add(formData);
+        setFormData({ email: "", subject: "", message: "" });
+        setSentStatus("sent");
+      } catch (error) {
+        console.error("Error submitting the form: ", error);
+        alert("There was an error submitting the form. Please try again.");
+      } finally {
+        setTimeout(() => setSentStatus("idle"), 2000);
+      }
+    }, 2000);
   };
 
   const [sentStatus, setSentStatus] = useState<"idle" | "sending" | "sent">(
