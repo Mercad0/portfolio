@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="w-full flex px-6 flex-col pb-16">
       <Head>
-      <title>Abimael M / Software Developer</title>
+        <title>Abimael M / Software Developer</title>
         <meta
           name="description"
           content="Abimael M Portfolio - front-end Software Developer, Explore recent projects, and contact information."
