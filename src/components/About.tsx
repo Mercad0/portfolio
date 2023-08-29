@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiCredly } from "react-icons/si";
 import Skills from "./Skills";
 
 function About() {
@@ -23,13 +24,22 @@ function About() {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/abimr"
+            href="https://www.linkedin.com/in/abimaelmercado/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
             className="rotateIcon text-blue-800 hover:text-blue-500"
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://www.credly.com/badges/7e4bce67-4dcf-479e-a704-477bd81a0567"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            className="rotateIcon text-orange-700 hover:text-orange-600 text-5xl"
+          >
+            <SiCredly />
           </a>
         </div>
         <div className="flex justify-center text-4xl mt-2 space-x-6">

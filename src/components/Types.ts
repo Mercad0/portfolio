@@ -6,7 +6,7 @@ export interface ProjectProps {
     description: string;
     code: string;
     live: string;
-    builtWith: string;
+    builtWith: any;
   }[];
 }
 
@@ -23,7 +23,6 @@ export interface MobileNavProps {
   links: { title: string; href: string }[];
 }
 
-
 // Skills.tsx Props
 export interface SkillProps {
   icons: {
@@ -33,7 +32,6 @@ export interface SkillProps {
     color: string;
   }[];
 }
-
 
 // Contact.tsx Props
 export interface ContactFormProps {
