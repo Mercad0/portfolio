@@ -2,7 +2,6 @@ import Image from "next/image";
 import { FaCode } from "react-icons/fa";
 import { RiLiveFill } from "react-icons/ri";
 import { ProjectProps } from "./Types";
-
 import {
   SiTypescript,
   SiTailwindcss,
@@ -101,7 +100,7 @@ const Eachproject = ({ projects }: ProjectProps) => {
               </a>
               <h3 className="text-2xl font-bold mt-2">{title}</h3>
               <p className="my-4">{description}</p>
-              <p className="md:text-3xl text-xl gap-2 bg-gray-300 rounded-lg w-fit h-fit mx-auto p-2 flex">
+              <p className="md:text-3xl text-2xl gap-2 hover:scale-105 duration-300 w-fit h-fit mx-auto p-2 flex">
                 {builtWith}
               </p>
             </div>
